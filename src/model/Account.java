@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Account {
 
     private String ownerName;
@@ -52,5 +54,24 @@ public class Account {
 
     public String getAccountNumber() {
         return accountNumber;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Account account = (Account) o;
+        return Objects.equals(accountNumber, account.accountNumber);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(accountNumber);
+    }
+
+    @Override
+    public String toString() {
+        return "Account Number: " + accountNumber
+                + ", Owner Name: " + ownerName
+                + ", Balance: " + balance;
     }
 }
