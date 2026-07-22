@@ -2,7 +2,7 @@ package model;
 
 import java.util.Objects;
 
-public class Account {
+public abstract class Account {
 
     private String ownerName;
     private long balance;
@@ -39,6 +39,10 @@ public class Account {
         }
         return false;
     }
+
+    public abstract double interestRate();
+
+    public abstract boolean canWithdraw(long amount);
 
     public String getOwnerName() {
         return ownerName;
