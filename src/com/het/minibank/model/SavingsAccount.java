@@ -1,4 +1,4 @@
-package model;
+package com.het.minibank.model;
 
 public class SavingsAccount extends Account {
 

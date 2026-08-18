@@ -1,6 +1,6 @@
-package util;
+package com.het.minibank.util;
 
-import model.Account;
+import com.het.minibank.model.Account;
 
 public class StatementFormatter {
 

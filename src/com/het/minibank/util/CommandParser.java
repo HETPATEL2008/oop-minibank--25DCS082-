@@ -1,7 +1,7 @@
-package util;
+package com.het.minibank.util;
 
-import model.Command;
-import model.TransactionType;
+import com.het.minibank.model.Command;
+import com.het.minibank.model.TransactionType;
 
 public class CommandParser {
 

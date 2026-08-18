@@ -1,4 +1,4 @@
-package util;
+package com.het.minibank.util;
 
 public class Validator {
 
