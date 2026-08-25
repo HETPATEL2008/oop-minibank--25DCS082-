@@ -2,7 +2,7 @@ package com.het.minibank.model;
 
 import java.util.Objects;
 
-public abstract class Account {
+public abstract class Account implements Transactable, InterestBearing {
 
     private String ownerName;
     private long balance;
