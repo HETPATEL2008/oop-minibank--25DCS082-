@@ -1,15 +1,21 @@
 package com.het.minibank.model;
 
+import com.het.minibank.model.annotation.Id;
+import com.het.minibank.model.annotation.Positive;
+
 import java.util.Objects;
 
 public abstract class Account implements Transactable, InterestBearing {
 
     private String ownerName;
+
+    @Positive
     private long balance;
     private boolean active;
 
     private final String accountNumber;
 
+    @Id
     private static int accountCounter = 0;
 
     public Account(String ownerName, long openingBalance) {
