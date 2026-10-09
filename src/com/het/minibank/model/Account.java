@@ -38,14 +38,14 @@ public abstract class Account implements Transactable, InterestBearing {
         return String.format("AC%04d", accountCounter);
     }
 
-    public void deposit(long amount) throws InvalidAmountException {
+    public synchronized void deposit(long amount) throws InvalidAmountException {
         if (amount <= 0) {
             throw new InvalidAmountException("Amount must be greater than zero: " + amount);
         }
         balance += amount;
     }
 
-    public boolean withdraw(long amount) throws InvalidAmountException, InsufficientFundsException {
+    public synchronized boolean withdraw(long amount) throws InvalidAmountException, InsufficientFundsException {
         if (amount <= 0) {
             throw new InvalidAmountException("Amount must be greater than zero: " + amount);
         }
@@ -56,7 +56,7 @@ public abstract class Account implements Transactable, InterestBearing {
         return true;
     }
 
-    public void transfer(Account to, long amount) throws BankException {
+    public synchronized void transfer(Account to, long amount) throws BankException {
         if (to == null) {
             throw new AccountNotFoundException("Destination account not found");
         }
@@ -81,7 +81,7 @@ public abstract class Account implements Transactable, InterestBearing {
         return ownerName;
     }
 
-    public long getBalance() {
+    public synchronized long getBalance() {
         return balance;
     }
 
