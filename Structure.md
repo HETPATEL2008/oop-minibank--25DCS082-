@@ -1,12 +1,12 @@
-# MiniBank — Project Structure
+# com.het.minibank.MiniBank — Project Structure
 
 ```
-MiniBank
+com.het.minibank.MiniBank
 └── src
     ├── (default package)
-    │   ├── MiniBank.java
-    │   ├── BankInfo.java
-    │   └── MenuOption.java
+    │   ├── com.het.minibank.MiniBank.java
+    │   ├── com.het.minibank.BankInfo.java
+    │   └── com.het.minibank.MenuOption.java
     │
     ├── model
     │   ├── Account.java

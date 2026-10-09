@@ -1,9 +1,11 @@
+package com.het.minibank;
+
 import java.util.Scanner;
 
 public class MiniBank {
 
     private static void displayMenu() {
-        System.out.println("===== MiniBank Menu =====");
+        System.out.println("===== com.het.minibank.MiniBank Menu =====");
         System.out.println("1. Open Account");
         System.out.println("2. Deposit");
         System.out.println("3. Withdraw");
@@ -13,7 +15,7 @@ public class MiniBank {
 
     public static void main(String[] args) {
 
-        BankInfo header = new BankInfo("MiniBank", "Changa Main Branch");
+        BankInfo header = new BankInfo("com.het.minibank.MiniBank", "Changa Main Branch");
         System.out.println(header);
 
         Scanner scanner = new Scanner(System.in);

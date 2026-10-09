@@ -1,3 +1,5 @@
+package com.het.minibank;
+
 public enum MenuOption {
     OPEN_ACCOUNT,
     DEPOSIT,
